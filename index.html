@@ -63,15 +63,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff
+    color:#fff
    }
 
    .contianer h2{
     font-size: 600px;
     font-weight: boid;
    }
-   .contianer h2 .type{
-    color: #b3d07e;
+   .contianer h2 .type {
+    color:#b3d07e;
    }
   </style>
  </head>
@@ -94,17 +94,16 @@
   </div>
 
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-  <script>
-   var typed = new Typed('.type',{
-    strings:['I am Michelle','Welcome to my website'],
-    typeSpeed: 250,
-    loop: true,
-    backSpeed: 350
-   })
-  </script>
+  
  </body>
 
  <script>
+  var typed = new Type('.type',{
+   strings:['I am Michelle','Welcome'],
+   typeSpeed: 250,
+   loop: true,
+   backSpeed: 350
+  })
   
   $("#nav a").on("click",function() {
    var position=$(this).parent().position();
