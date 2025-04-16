@@ -66,8 +66,8 @@
     color:#02040d;
    }
 
-   .contianer h2{
-    font-size: 600px;
+   .contianer h2 {
+    font-size: 60px;
     font-weight: boid;
    }
    .contianer h2 .type {
@@ -90,19 +90,20 @@
  <body>
 <img src="试用.jpg" alt="home page photo" class="responsive-img" style="margin-top:20px;">
   <div class="container">
-   <h2>HELLO!<span class="type">I am Michelle</span></h2>
+   <h2>HELLO!<span class="type"><br>I am Michelle</span></h2>
   </div>
- </body>
 
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
  <script>
-  var typed = new Type('.type',{
+  var typed = new Typed('.type',{
    strings:['I am Michelle','Welcome'],
-   typeSpeed: 100,
+   typeSpeed: 150,
    loop: true,
    backSpeed: 200;
   })
    </script>
+ </body>
+ 
   <script>
   $("#nav a").on("click",function() {
    var position=$(this).parent().position();
