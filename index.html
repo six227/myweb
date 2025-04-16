@@ -17,20 +17,21 @@
    #nav li a{
     position: relative;
     padding: 15px 50px;
-    font:none;
+    font:500 24px
     border:none;
     outline:none;
-    color:#5D3E44(70,100,80);
+    color:#5D3E44(70,100,180);
     disply:inline-block;
     text-decoration:none;
-    z-index:3;
+    z-index: 3;
    }
-   .slide1,slide2{
+   .slide1,
+   .slide2{
     position:absolute;
     display:inline-block;
     height:60px;
     border-radius:10em;
-    transition:all 0.6s cubic-bezier(0.23,1,0.32,1.05);
+    transition:all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05)
    }
    .slide1 {
     background-color: #D7B78E(170,190,255);
@@ -41,6 +42,10 @@
     background-color:#d7b78e(170,190,255, .5);
     z-index: 1;
     box-shadow:0 0 20px #ffffffaa inset;
+   }
+   .squeeze {
+    transform: scale(0.9);
+   }
   </style>
  </head>
  
