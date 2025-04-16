@@ -94,15 +94,12 @@
   </div>
 
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-  
- </body>
-
  <script>
   var typed = new Type('.type',{
    strings:['I am Michelle','Welcome'],
-   typeSpeed: 250,
+   typeSpeed: 100,
    loop: true,
-   backSpeed: 350
+   backSpeed: 200;
   })
   
   $("#nav a").on("click",function() {
@@ -121,5 +118,6 @@
   var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
   var current=$("li:nth-of-type(3) a").position();
   $("#nav .slide1".css({left: +current.left,width: currentWidth });
+   </body>
  </script>
 </html>
