@@ -53,6 +53,21 @@
    }
    *{margin: 0;
    padding: 0;}
+   body {
+    height: 100vh;
+   }
+   .container {
+    width: 100%;
+    height: 100%;
+    display: fiex;
+    justify-content: center;
+    align-items: center;
+   }
+   .container h2 {
+    font-size: 60px;
+    font-weight: bold;
+   }
+   
   </style>
  </head>
  
@@ -69,6 +84,20 @@
  </header>
  <body>
 <img src="试用.jpg" alt="home page photo" class="responsive-img" style="margin-top:20px;">
+
+  <div class="container">
+   <h2>Hello!<span class="type">I am Michelle</span></h2>
+  </div>
+
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script>
+   var typed = new Typed('.type', {
+    strings: ['I am Michelle','Welcome'],
+    typeSpeed: 150,
+    loop: true,
+    backSpeed: 200
+   })
+  </script>
  </body>
  
   <script>
