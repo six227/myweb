@@ -47,11 +47,11 @@
     transform: scale(0.9);
    }
    .responsive-img {
-    max-width:90%;
-    max-height:90%;
+    max-width:97%;
+    max-height:97%;
     height:auto;
     width:auto;
-    margin-left: -20px;
+    margin-left: 10px;
     border-radius:50px;
    }
    *{margin: 0;
@@ -84,6 +84,64 @@
     top: 450px;
     left: 90px;
    }
+   .tag-list {
+    width: 30rem;
+    font-family:"Montserrat";
+    position: relative;
+    overflow: hidden;
+   }
+   .inner {
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+    animation: loop 5s linear infinite;
+   }
+   .tag {
+    display: flex;
+    align-items: center;
+    gap: 00.2rem;
+    color:#02040d;
+    font-size: 0.9rem;
+    background-color:#B3D07E;
+    padding: 0.7rem 1rem;
+    border-radius: 0.4rem;
+    box-shadow:
+     0 0.1rem 0.2rem #00000033,
+     0 0.1rem 0.5rem #0000004d,
+     0 0.2rem 1.5rem #00000066,
+   }
+   .tag span{
+    font-size: 1.2rem;
+    color:#B3D07E;
+   }
+   .fade{
+    position: absolute;
+    background: linear-gradient(90deg,#1e293b, transparent 30%, transparent70%,#1e293b);
+    inset: 0;
+    pointer-events: none;
+   }
+   @keyframes loop {
+    0% {
+     transform: translateX(0);
+    }
+
+    100% {
+     transform: translateX(-50%);
+    }
+   }
+   .t-list {
+    width: 30rem;
+    font-family: "Montserrat";
+    position: relative;
+    overflow: hiddem;
+   }
+   .iner{
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+    animation: loop 5s linear infinite;
+   }
+   
   </style>
  </head>
  
@@ -120,6 +178,56 @@
  
  <section id="me">
   <h1 style="color:#48251A;font-size: 50px;">---About Me---</h1>
+  <div class="tag-list">
+   <div class="inner">
+    <div class="tag"><span>#</span>
+     Michelle</div>
+    <div class="tag"><span>#</span>
+     Cheng Lok Yi</div>
+    <div class="tag"><span>#</span>
+     19 year old</div>
+    <div class="tag"><span>#</span>
+     year of Dog</div>
+    <div class="tag"><span>#</span>
+     Girls</div>
+    <div class="tag"><span>#</span>
+     Michelle</div>
+    <div class="tag"><span>#</span>
+     Cheng Lok Yi</div>
+    <div class="tag"><span>#</span>
+     19 year old</div>
+    <div class="tag"><span>#</span>
+     year of Dog</div>
+    <div class="tag"><span>#</span>
+     Girls</div>
+   </div>
+   <div class="fade"></div>
+  </div>
+
+  <div class="t-list">
+   <div class="iner">
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+    <div class="tag"><span>#</span>
+     CSS</div>
+   </div>
+  </div>
  </section>
  </body>
  
