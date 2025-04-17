@@ -67,7 +67,7 @@
 <script>
     $("#nav a").on("click", function () {
         var position = $(this).parent().position();
-        var width = $(this).parent().width();
+        var width = $(this).parent().width()*0.9;
         $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
     });
     $("#nav a").on("mouseover", function () {
