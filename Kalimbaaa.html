@@ -1,182 +1,137 @@
-<!DOCTYPE html>
+<!DOCTYPE,html>
 <html lang="zh-HK">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is Kalimba?</title>
-    <style>
-    :root {
-      --primary-color: #8B4513; 
-      --secondary-color: #D2B48C;
-      --accent-color: #F5DEB3;
-      --text-color: #48251A;
-      --light-bg: #FFF8DC;
-      --nav-height: 70px;
-    }
-        body {
-            font-family: 'Arial', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        #nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      background: var(--secondary-color);
-      padding: 0;
-      margin: 0;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      height: var(--nav-height);
-    }
-    
-    #nav li {
-      position: relative;
-      margin: 0 5px;
-    }
-    
-    #nav li a {
-      position: relative;
-      padding: 0 25px;
-      height: var(--nav-height);
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      color: var(--text-color);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 16px;}
+:root {
+  --primary-color: #8B4513; 
+  --secondary-color: #D2B48C;
+  --accent-color: #F5DEB3;
+  --text-color: #48251A;
+  --light-bg: #FFF8DC;
+  --nav-height: 70px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-     #nav li a:hover {
-      color: #fff;
-      background-color: var(--primary-color);
-    }
-    
-    .slide1, .slide2 {
-      position: absolute;
-      bottom: 0;
-      height: 4px;
-      background-color: var(--primary-color);
-      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1.05);
-      border-radius: 2px 2px 0 0;
-    }
-    
-    .slide1 {
-      z-index: 2;
-      opacity: 0.8;
-    }
-    
-    .slide2 {
-      z-index: 1;
-      opacity: 0;
-      background-color: var(--accent-color);
-      box-shadow: 0 0 10px var(--accent-color);
-    }
-        @media (max-width: 768px) {
-      #nav {
-        height: auto;
-        flex-direction: column;
-        align-items: stretch;
-      }
-      
-      #nav li {
-        margin: 0;
-      }
-      
-      #nav li a {
-        padding: 15px 20px;
-        justify-content: center;}
-            
-        h1 {
-            color: #8B4513;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        h2 {
-            color: #8B4513;
-            border-bottom: 2px solid #D2B48C;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        
-        img {
-            max-width: 100%;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-        }
-        
-        .kalimba-img {
-            width: 300px;
-            height: auto;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #666;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: var(--secondary-color);
+  padding: 0;
+  margin: 0;
+  box-shadow: var(--shadow);
+  height: var(--nav-height);
+}
 
-<body>
-  <ul id="nav">
-    <li class="slide1"></li>
-    <li class="slide2"></li>
-    <li><a href="https://six227.github.io/myweb/Home.html#home-section"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="https://six227.github.io/myweb/Home.html#about"><i class="fas fa-user"></i> About Me</a></li>
-    <li><a href="#"><i class="fas fa-music"></i> Kalimba</a></li>
-    <li><a href="https://six227.github.io/myweb/video show.html"><i class="fas fa-video"></i> Video Show</a></li>
-  </ul>
-    <h1>拇指琴Kalimba简介</h1>
-    
-    <h2>什么是拇指琴？</h2>
-    <p>拇指琴，又称卡林巴琴Kalimba，是一种源自非洲的乐器。它由木质共鸣箱和金属音条组成，用拇指拨动音条发声，音色空灵悦耳。</p>
-    
-    <h2>拇指琴特点</h2>
-    <ul>
-        <li>简单易学，适合初学者</li>
-        <li>体积小巧，方便携带</li>
-        <li>独特空灵的音色</li>
-    </ul>
-    
-    <h2>常见类型</h2>
-    <p>主要有17音和21音两种，音条越多音域越广。</p>
-    
-    <h2>如何演奏</h2>
-    <p>将琴放在手心或桌面上，用拇指指甲或指尖拨动音条即可。每个音条对应一个音符，可以演奏旋律或和弦。</p>
+#nav li {
+  position: relative;
+  margin: 0 10px;
+}
 
-    <script>
-    $(document).ready(function() {
-      $("#nav a").on("click", function() {
-        var position = $(this).parent().position();
-        var width = $(this).parent().width();
-        $("#nav .slide1").css({ left: position.left, width: width });
-      });
-      
-      $("#nav a").on("mouseover", function() {
-        var position = $(this).parent().position();
-        var width = $(this).parent().width();
-        $("#nav .slide2").css({ 
-          left: position.left, 
-          width: width,
-          opacity: 1
-        });
-      });
-      
-      $("#nav a").on("mouseout", function() {
-        $("#nav .slide2").css({ opacity: 0 });
-      });
-      
-      var firstNavItem = $("#nav li:nth-child(3)");
-      var position = firstNavItem.position();
+#nav li a {
+  position: relative;
+  padding: 0 25px;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#nav li a:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+#nav li a i {
+  margin-right: 8px;
+}
+
+.slide1, .slide2 {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--primary-color);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1.05);
+  border-radius: 2px 2px 0 0;
+}
+
+.slide1 {
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.slide2 {
+  z-index: 1;
+  opacity: 0;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  #nav {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  #nav li {
+    margin: 0;
+  }
+  
+  #nav li a {
+    padding: 15px 20px;
+    justify-content: center;
+  }
+  
+  body {
+    padding-top: 180px;
+  }
+}
+
+<ul id="nav">
+  <li class="slide1"></li>
+  <li class="slide2"></li>
+  <li><a href="https://six227.github.io/myweb/Home.html#home-section"><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="https://six227.github.io/myweb/Home.html#about"><i class="fas fa-user"></i> About Me</a></li>
+  <li><a href="#"><i class="fas fa-music"></i> Kalimba</a></li>
+  <li><a href="https://six227.github.io/myweb/video show.html"><i class="fas fa-video"></i> Video Show</a></li>
+</ul>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+    var firstNavItem = $("#nav li:nth-child(3)");
+    var position = firstNavItem.position();
+    var width = firstNavItem.width();
+    $(".slide1").css({ left: position.left, width: width });
+
+    $("#nav a").on("click", function() {
+      var position = $(this).parent().position();
+      var width = $(this).parent().width();
+      $("#nav .slide1").css({ left: position.left, width: width });
+    });
     
+    $("#nav a").on("mouseover", function() {
+      var position = $(this).parent().position();
+      var width = $(this).parent().width();
+      $("#nav .slide2").css({ 
+        left: position.left, 
+        width: width,
+        opacity: 1
+      });
+    });
+    
+    $("#nav a").on("mouseout", function() {
+      $("#nav .slide2").css({ opacity: 0 });
+    });
+  });
+</script>
