@@ -157,4 +157,29 @@
     
     <h2>如何演奏</h2>
     <p>将琴放在手心或桌面上，用拇指指甲或指尖拨动音条即可。每个音条对应一个音符，可以演奏旋律或和弦。</p>
+
+    <script>
+    $(document).ready(function() {
+      $("#nav a").on("click", function() {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide1").css({ left: position.left, width: width });
+      });
+      
+      $("#nav a").on("mouseover", function() {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide2").css({ 
+          left: position.left, 
+          width: width,
+          opacity: 1
+        });
+      });
+      
+      $("#nav a").on("mouseout", function() {
+        $("#nav .slide2").css({ opacity: 0 });
+      });
+      
+      var firstNavItem = $("#nav li:nth-child(3)");
+      var position = firstNavItem.position();
     
