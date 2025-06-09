@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>拇指琴世界 | Kalimba World</title>
+  <title>成就：拇指琴Kalimba</title>
   
   <!-- 引入的CSS和JS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,7 +14,7 @@
   
   <style>
     :root {
-      --primary-color: #8B4513; /* 棕色主题 */
+      --primary-color: #8B4513; 
       --secondary-color: #D2B48C;
       --accent-color: #F5DEB3;
       --text-color: #48251A;
@@ -94,7 +94,7 @@
     
     /* 主内容区 */
     .hero-section {
-      height: 80vh;
+      height: 60vh;
       background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
                   url('https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
       background-size: cover;
@@ -109,56 +109,45 @@
     }
     
     .hero-title {
-      font-size: 3.5rem;
+      font-size: 3rem;
       font-weight: 700;
       margin-bottom: 20px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     
-    .hero-subtitle {
-      font-size: 1.5rem;
+    /* About Me 区域 */
+    .about-section {
+      padding: 80px 20px;
       max-width: 800px;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      margin: 0 auto;
+      text-align: center;
     }
     
-    /* 特色内容卡片 */
-    .feature-cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 50px 20px;
+    .about-content {
       background-color: white;
-    }
-    
-    .feature-card {
-      width: 300px;
-      margin: 15px;
+      padding: 40px;
       border-radius: 10px;
-      overflow: hidden;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: -50px;
+      position: relative;
+      z-index: 10;
     }
     
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    .about-title {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
     
-    .card-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
     }
     
-    .card-body {
-      padding: 20px;
-      background-color: white;
-    }
-    
-    .card-title {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
+    .signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
       color: var(--primary-color);
     }
     
@@ -203,11 +192,15 @@
       }
       
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       
-      .hero-subtitle {
-        font-size: 1.2rem;
+      .about-section {
+        padding: 40px 20px;
+      }
+      
+      .about-content {
+        padding: 30px 20px;
       }
     }
   </style>
@@ -219,43 +212,28 @@
     <li class="slide1"></li>
     <li class="slide2"></li>
     <li><a href="https://six227.github.io/myweb"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="https://six227.github.io/myweb/"><i class="fas fa-user"></i> About Me</a></li>
+    <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
     <li><a href="#"><i class="fas fa-music"></i> Kalimba</a></li>
     <li><a href="#"><i class="fas fa-video"></i> Video Show</a></li>
-    <li><a href="#"><i class="fas fa-history"></i> Timeline</a></li>
   </ul>
 
   <!-- 英雄区域 -->
   <section class="hero-section">
-    <h1 class="hero-title">欢迎来到拇指琴世界</h1>
-    <p class="hero-subtitle">探索拇指琴的奇妙音乐之旅，感受非洲传统乐器的独特魅力</p>
-    <button class="btn btn-light btn-lg">了解更多</button>
+    <h1 class="hero-title">欢迎来到我的拇指琴世界</h1>
+    <p class="hero-subtitle">探索拇指琴的奇妙音乐之旅</p>
   </section>
 
-  <!-- 特色内容 -->
-  <section class="feature-cards">
-    <div class="feature-card">
-      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kalimba" class="card-img">
-      <div class="card-body">
-        <h3 class="card-title">拇指琴介绍</h3>
-        <p>了解拇指琴的历史、结构和发声原理，感受这种非洲传统乐器的独特魅力。</p>
-      </div>
-    </div>
-    
-    <div class="feature-card">
-      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Performance" class="card-img">
-      <div class="card-body">
-        <h3 class="card-title">演奏视频</h3>
-        <p>欣赏精彩的拇指琴演奏视频，包括经典曲目和原创作品。</p>
-      </div>
-    </div>
-    
-    <div class="feature-card">
-      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Learning" class="card-img">
-      <div class="card-body">
-        <h3 class="card-title">学习资源</h3>
-        <p>获取拇指琴学习教程、乐谱和技巧分享，开启你的音乐之旅。</p>
-      </div>
+  <!-- About Me 区域 -->
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <h2 class="about-title">关于我</h2>
+      <p class="about-text">
+        我叫XXX，是一名拇指琴爱好者和演奏者。在中二疫情时期，无法出门，刚好接触到拇指琴，便不断地练习歌曲。现在我已经能演奏很多复杂的曲子，并录制发到社交媒体上。
+      </p>
+      <p class="about-text">
+        拇指琴不仅是一种乐器，更是我在疫情期间的精神寄托。通过它，我找到了表达情感的新方式，也结识了许多志同道合的朋友。
+      </p>
+      <div class="signature">- XXX -</div>
     </div>
   </section>
 
@@ -268,4 +246,37 @@
       <div class="social-icons">
         <a href="#"><i class="fab fa-youtube"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i cl
+        <a href="#"><i class="fab fa-bilibili"></i></a>
+      </div>
+      
+      <p>&copy; 2023 我的拇指琴世界 | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+      // 导航栏效果
+      $("#nav a").on("click", function() {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide1").css({ left: position.left, width: width });
+      });
+      
+      $("#nav a").on("mouseover", function() {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide2").css({ 
+          left: position.left, 
+          width: width,
+          opacity: 1
+        });
+      });
+      
+      $("#nav a").on("mouseout", function() {
+        $("#nav .slide2").css({ opacity: 0 });
+      });
+      
+      // 初始化第一个导航项为活动状态
+      var firstNavItem = $("#nav li:nth-child(3)");
+      var position = firstNavItem.position();
+      var width
