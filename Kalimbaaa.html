@@ -113,7 +113,142 @@
   <h2>什麼是拇指琴/卡林巴? </h2>
   <p>拇指琴(卡林巴琴)是來自非洲的樂器.它即好學又好彈、音色如音樂盒般療癒，因此广受欢迎</p>
 
-  <h2></h2>
+
+<h2>拇指琴类型对比</h2>
+<div class="comparison-container">
+  <div class="type-card">
+    <h3><i class="fas fa-solid fa-guitar"></i> 板式琴</h3>
+    <ul>
+      <li>琴體是實心的實木板</li>
+      <li>共鳴與震動很直接，聲音乾淨</li>
+      <li>音量较小,但音色纯净</li>
+      <li>适合喜欢清晰音色的演奏者</li>
+    </ul>
+  </div>
+  
+  <div class="type-card">
+    <h3><i class="fas fa-solid fa-box-open"></i> 箱式琴</h3>
+    <ul>
+      <li>琴體是中空的共鳴箱</li>
+      <li>音量比板式琴大，共鸣效果更好</li>
+      <li>音色温暖浑厚，延音更长</li>
+    </ul>
+  </div>
+</div>
+
+<h2>常见问题解答</h2>
+<div class="faq-item">
+  <h3 class="faq-question">为什么弹拇指琴的时候手指很痛？</h3>
+  <div class="faq-answer">
+    <p>主要原因是你没有留指甲！拇指琴应该用指甲来弹奏，而不是直接用指肉。</p>
+
+    <h3 class="faq-question">需要背谱吗？</h3>
+  <div class="faq-answer">
+    <p>需要的,这样才能保证歌曲流畅度</p>
+    
+  </div>
+</div>
+
+<style>
+
+.comparison-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.type-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.type-card:hover {
+  transform: translateY(-5px);
+}
+
+.type-card h3 {
+  color: var(--primary-color);
+  border-bottom: 2px dashed var(--secondary-color);
+  padding-bottom: 10px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.type-card h3 i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.faq-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.faq-question {
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq-question:before {
+  content: "Q";
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.faq-answer {
+  padding-top: 15px;
+  border-top: 1px solid var(--secondary-color);
+  margin-top: 15px;
+}
+
+.faq-answer ol {
+  padding-left: 25px;
+}
+
+.faq-answer li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 5px;
+}
+
+.faq-answer li:before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+</style>
+
+<script>
+// 可添加FAQ交互效果
+$(document).ready(function() {
+  $('.faq-question').on('click', function() {
+    $(this).next('.faq-answer').slideToggle();
+  });
+});
+</script>
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
