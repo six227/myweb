@@ -113,13 +113,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  $(document).ready(function() {
-
-    var firstNavItem = $("#nav li:nth-child(3)");
-    var position = firstNavItem.position();
-    var width = firstNavItem.width();
-    $(".slide1").css({ left: position.left, width: width });
-
+  )
     $("#nav a").on("click", function() {
       var position = $(this).parent().position();
       var width = $(this).parent().width();
