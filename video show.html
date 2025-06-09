@@ -272,3 +272,30 @@
             <div class="col-md-6 col-lg-4">
                 <div class="video-card">
                     <div class="video-embed">
+
+ <script>
+    $(document).ready(function() {
+      // 导航栏效果
+      $("#nav a").on("click", function() {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide1").css({ left: position.left, width: width });
+      });
+      
+      $("#nav a").on("mouseover", function() {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide2").css({ 
+          left: position.left, 
+          width: width,
+          opacity: 1
+        });
+      });
+      
+      $("#nav a").on("mouseout", function() {
+        $("#nav .slide2").css({ opacity: 0 });
+      });
+      
+      var firstNavItem = $("#nav li:nth-child(3)");
+      var position = firstNavItem.position();
+    
