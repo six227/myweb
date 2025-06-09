@@ -92,7 +92,7 @@
     }
     
     /* 主内容区 */
-    .hero-section {
+    .Home-section {
       height: 60vh;
       background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
                   url('https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
@@ -107,7 +107,7 @@
       padding: 0 20px;
     }
     
-    .hero-title {
+    .Home-title {
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 20px;
@@ -190,7 +190,7 @@
         justify-content: center;
       }
       
-      .hero-title {
+      .home-title {
         font-size: 2rem;
       }
       
@@ -210,15 +210,15 @@
   <ul id="nav">
     <li class="slide1"></li>
     <li class="slide2"></li>
-    <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="#Home-section"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
     <li><a href="#"><i class="fas fa-music"></i> Kalimba</a></li>
     <li><a href="#"><i class="fas fa-video"></i> Video Show</a></li>
   </ul>
 
   <!-- 英雄区域 -->
-  <section class="hero-section">
-    <h1 class="hero-title">欢迎来到我的拇指琴網站੭ ᐕ)੭ </h1>
+  <section class="Home-section">
+    <h1 class="Home-title">欢迎来到我的拇指琴網站੭ ᐕ)੭ </h1>
   </section>
 
   <!-- About Me 区域 -->
@@ -273,7 +273,6 @@
         $("#nav .slide2").css({ opacity: 0 });
       });
       
-      // 初始化第一个导航项为活动状态
       var firstNavItem = $("#nav li:nth-child(3)");
       var position = firstNavItem.position();
       var width
