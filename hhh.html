@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拇指琴世界 | Kalimba World</title>
+  
+  <!-- 引入的CSS和JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <style>
+    :root {
+      --primary-color: #8B4513; /* 棕色主题 */
+      --secondary-color: #D2B48C;
+      --accent-color: #F5DEB3;
+      --text-color: #48251A;
+      --light-bg: #FFF8DC;
+      --nav-height: 70px;
+    }
+    
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      margin: 0;
+      padding-top: var(--nav-height);
+      line-height: 1.6;
+    }
+    
+    /* 导航栏美化 */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      background: var(--secondary-color);
+      padding: 0;
+      margin: 0;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      height: var(--nav-height);
+    }
+    
+    #nav li {
+      position: relative;
+      margin: 0 5px;
+    }
+    
+    #nav li a {
+      position: relative;
+      padding: 0 25px;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+    
+    #nav li a:hover {
+      color: #fff;
+      background-color: var(--primary-color);
+    }
+    
+    .slide1, .slide2 {
+      position: absolute;
+      bottom: 0;
+      height: 4px;
+      background-color: var(--primary-color);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1.05);
+      border-radius: 2px 2px 0 0;
+    }
+    
+    .slide1 {
+      z-index: 2;
+      opacity: 0.8;
+    }
+    
+    .slide2 {
+      z-index: 1;
+      opacity: 0;
+      background-color: var(--accent-color);
+      box-shadow: 0 0 10px var(--accent-color);
+    }
+    
+    /* 主内容区 */
+    .hero-section {
+      height: 80vh;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                  url('https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    
+    /* 特色内容卡片 */
+    .feature-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 50px 20px;
+      background-color: white;
+    }
+    
+    .feature-card {
+      width: 300px;
+      margin: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .card-body {
+      padding: 20px;
+      background-color: white;
+    }
+    
+    .card-title {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    /* 页脚 */
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+    .social-icons {
+      margin: 20px 0;
+    }
+    
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: var(--accent-color);
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      #nav {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      #nav li {
+        margin: 0;
+      }
+      
+      #nav li a {
+        padding: 15px 20px;
+        justify-content: center;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <ul id="nav">
+    <li class="slide1"></li>
+    <li class="slide2"></li>
+    <li><a href="https://six227.github.io/myweb"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="https://six227.github.io/myweb/"><i class="fas fa-user"></i> About Me</a></li>
+    <li><a href="#"><i class="fas fa-music"></i> Kalimba</a></li>
+    <li><a href="#"><i class="fas fa-video"></i> Video Show</a></li>
+    <li><a href="#"><i class="fas fa-history"></i> Timeline</a></li>
+  </ul>
+
+  <!-- 英雄区域 -->
+  <section class="hero-section">
+    <h1 class="hero-title">欢迎来到拇指琴世界</h1>
+    <p class="hero-subtitle">探索拇指琴的奇妙音乐之旅，感受非洲传统乐器的独特魅力</p>
+    <button class="btn btn-light btn-lg">了解更多</button>
+  </section>
+
+  <!-- 特色内容 -->
+  <section class="feature-cards">
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kalimba" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">拇指琴介绍</h3>
+        <p>了解拇指琴的历史、结构和发声原理，感受这种非洲传统乐器的独特魅力。</p>
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Performance" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">演奏视频</h3>
+        <p>欣赏精彩的拇指琴演奏视频，包括经典曲目和原创作品。</p>
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Learning" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">学习资源</h3>
+        <p>获取拇指琴学习教程、乐谱和技巧分享，开启你的音乐之旅。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <h3>联系我</h3>
+      <p>分享你对拇指琴的热爱和经验</p>
+      
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i cl
